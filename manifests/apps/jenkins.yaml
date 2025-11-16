@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: jenkins-deployment
   labels:
-    app: ci/cd
+    app: ci-cd
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ci/cd
+      app: ci-cd
   template:
     metadata:
       labels:
-        app: ci/cd
+        app: ci-cd
     spec:
       containers:
       - name: jenkins
