@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deployment
+  labels:
+    app: ci/cd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ci/cd
+  template:
+    metadata:
+      labels:
+        app: ci/cd
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkins:latest
+        ports:
+        - containerPort: 80
