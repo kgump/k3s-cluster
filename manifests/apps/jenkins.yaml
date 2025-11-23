@@ -14,6 +14,8 @@ spec:
       labels:
         app: ci-cd
     spec:
+      nodeSelector:
+        node-role.kubernetes.io/worker: "worker"
       containers:
       - name: jenkins
         image: jenkins:latest
