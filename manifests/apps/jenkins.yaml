@@ -18,6 +18,6 @@ spec:
         node-role.kubernetes.io/worker: "true"
       containers:
       - name: jenkins
-        image: jenkins:latest
+        image: jenkins:lts
         ports:
         - containerPort: 80
